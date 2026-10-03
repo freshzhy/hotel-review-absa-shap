@@ -1,0 +1,232 @@
+{
+  "raw_rows": 515738,
+  "raw_hotels": 1492,
+  "country_counts": {
+    "United Kingdom": 262301,
+    "Spain": 60149,
+    "France": 59928,
+    "Netherlands": 57214,
+    "Austria": 38939,
+    "Italy": 37207
+  },
+  "placeholder_patterns": {
+    "^no\\s+negative$": {
+      "negative_field": 127890,
+      "positive_field": 0
+    },
+    "^no\\s+positive$": {
+      "negative_field": 0,
+      "positive_field": 35946
+    },
+    "^nothing$": {
+      "negative_field": 21185,
+      "positive_field": 1731
+    },
+    "^nothing\\s+really$": {
+      "negative_field": 656,
+      "positive_field": 41
+    },
+    "^nothing\\s+at\\s+all$": {
+      "negative_field": 467,
+      "positive_field": 66
+    },
+    "^nothing\\s+to\\s+report$": {
+      "negative_field": 87,
+      "positive_field": 2
+    },
+    "^nothing\\s+i\\s+can\\s+think\\s+of$": {
+      "negative_field": 69,
+      "positive_field": 1
+    },
+    "^none$": {
+      "negative_field": 1501,
+      "positive_field": 40
+    },
+    "^n\\s*/?\\s*a$": {
+      "negative_field": 2087,
+      "positive_field": 74
+    },
+    "^na$": {
+      "negative_field": 272,
+      "positive_field": 19
+    },
+    "^nil$": {
+      "negative_field": 332,
+      "positive_field": 7
+    },
+    "^$": {
+      "negative_field": 849,
+      "positive_field": 183
+    }
+  },
+  "negative_field_placeholder": 155123,
+  "positive_field_placeholder": 38091,
+  "negative_field_placeholder_pct": 30.077868995497713,
+  "positive_field_placeholder_pct": 7.385726861313302,
+  "placeholders_missed_by_v1": {
+    "negative_field": 4748,
+    "positive_field": 394
+  },
+  "word_count_when_placeholder": {
+    "negative_nonzero": 27233,
+    "positive_nonzero": 2145
+  },
+  "dropped_empty_or_short": 16677,
+  "rows_after_filter": 499061,
+  "retention_pct": 96.76638137969279,
+  "aspect_mention_rate_pct": {
+    "Location": 54.438635757953435,
+    "Cleanliness": 22.48823290138881,
+    "Service": 55.18062922167831,
+    "Room": 68.51266678822829,
+    "Food_Beverage": 40.86474398921174,
+    "Value": 18.90871055842873,
+    "Facilities": 21.7243984202332,
+    "Noise": 12.720689454796108
+  },
+  "segments_per_review": {
+    "mean": 3.7581818655434907,
+    "median": 3.0
+  },
+  "label_encoders": {
+    "Trip_Type": {
+      "Business": 0,
+      "Leisure": 1,
+      "Unknown": 2
+    },
+    "Traveler_Type": {
+      "Couple": 0,
+      "Family": 1,
+      "Group": 2,
+      "Solo": 3,
+      "Unknown": 4
+    },
+    "Country": {
+      "Austria": 0,
+      "France": 1,
+      "Italy": 2,
+      "Netherlands": 3,
+      "Spain": 4,
+      "United Kingdom": 5
+    }
+  },
+  "score_min": 2.5,
+  "score_max": 10.0,
+  "binning": {
+    "primary_bins": [
+      0,
+      4,
+      7,
+      10
+    ],
+    "primary_intervals": "Low=[2.5,4], Medium=(4,7], High=(7,10]",
+    "unassigned_scores": 0,
+    "S1_bins": [
+      0,
+      3.5,
+      7.5,
+      10
+    ],
+    "S2_bins": [
+      0,
+      5,
+      8,
+      10
+    ],
+    "primary_distribution": {
+      "Low": {
+        "n": 10318,
+        "pct": 2.06748273257177
+      },
+      "Medium": {
+        "n": 75065,
+        "pct": 15.041247462735017
+      },
+      "High": {
+        "n": 413678,
+        "pct": 82.89126980469321
+      }
+    },
+    "S1_distribution": {
+      "Low": {
+        "n": 6302,
+        "pct": 1.2627714848485456
+      },
+      "Medium": {
+        "n": 137049,
+        "pct": 27.461372457475136
+      },
+      "High": {
+        "n": 355710,
+        "pct": 71.27585605767631
+      }
+    },
+    "S2_distribution": {
+      "Low": {
+        "n": 29826,
+        "pct": 5.976423723753208
+      },
+      "Medium": {
+        "n": 146097,
+        "pct": 29.274377280532843
+      },
+      "High": {
+        "n": 323138,
+        "pct": 64.74919899571395
+      }
+    }
+  },
+  "n_features": 37,
+  "feature_names": [
+    "sent_Location",
+    "sent_Cleanliness",
+    "sent_Service",
+    "sent_Room",
+    "sent_Food_Beverage",
+    "sent_Value",
+    "sent_Facilities",
+    "sent_Noise",
+    "overall_sentiment",
+    "positive_sentiment",
+    "negative_sentiment",
+    "sentiment_gap",
+    "review_word_count",
+    "Review_Total_Negative_Word_Counts",
+    "Review_Total_Positive_Word_Counts",
+    "neg_pos_word_ratio",
+    "num_aspects_mentioned",
+    "Nights",
+    "Is_Mobile",
+    "is_peak_season",
+    "is_experienced_reviewer",
+    "review_month",
+    "Total_Number_of_Reviews_Reviewer_Has_Given",
+    "Trip_Type=Business",
+    "Trip_Type=Leisure",
+    "Trip_Type=Unknown",
+    "Traveler_Type=Couple",
+    "Traveler_Type=Family",
+    "Traveler_Type=Group",
+    "Traveler_Type=Solo",
+    "Traveler_Type=Unknown",
+    "Hotel_Country=Austria",
+    "Hotel_Country=France",
+    "Hotel_Country=Italy",
+    "Hotel_Country=Netherlands",
+    "Hotel_Country=Spain",
+    "Hotel_Country=United Kingdom"
+  ],
+  "versions": {
+    "python": "3.12.0",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "imbalanced-learn": "0.14.2",
+    "xgboost": "3.4.1",
+    "lightgbm": "4.7.0",
+    "shap": "0.52.0",
+    "vaderSentiment": "n/a",
+    "random_state": 42
+  }
+}

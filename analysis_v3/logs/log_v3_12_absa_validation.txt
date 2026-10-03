@@ -1,0 +1,57 @@
+======================================================================
+v3 Step 12 | ABSA validation against human annotations (HRAST)
+======================================================================
+Sentences: 23,113
+
+--- aspect detection: word-boundary + inflections (study) ---
+  Location       P=0.797 R=0.916 F1=0.852  (gold 4,729, predicted 5,436)
+  Cleanliness    P=0.864 R=0.933 F1=0.897  (gold 2,927, predicted 3,160)
+  Service        P=0.917 R=0.877 F1=0.896  (gold 4,342, predicted 4,150)
+  Room           P=0.781 R=0.933 F1=0.850  (gold 8,775, predicted 10,483)
+  Food_Beverage  P=0.830 R=0.964 F1=0.892  (gold 3,026, predicted 3,513)
+  Value          P=0.652 R=0.828 F1=0.730  (gold 892, predicted 1,133)
+  Facilities     P=0.856 R=0.474 F1=0.610  (gold 4,346, predicted 2,406)
+  Noise          P=0.915 R=0.909 F1=0.912  (gold 1,604, predicted 1,593)
+  micro P=0.823 R=0.856 F1=0.839 | macro P=0.826 R=0.854 F1=0.830
+
+--- aspect detection: word-boundary, plural only ---
+  Location       P=0.817 R=0.913 F1=0.862  (gold 4,729, predicted 5,282)
+  Cleanliness    P=0.857 R=0.729 F1=0.788  (gold 2,927, predicted 2,490)
+  Service        P=0.920 R=0.875 F1=0.897  (gold 4,342, predicted 4,133)
+  Room           P=0.782 R=0.932 F1=0.850  (gold 8,775, predicted 10,464)
+  Food_Beverage  P=0.832 R=0.962 F1=0.893  (gold 3,026, predicted 3,499)
+  Value          P=0.662 R=0.803 F1=0.726  (gold 892, predicted 1,081)
+  Facilities     P=0.856 R=0.474 F1=0.610  (gold 4,346, predicted 2,406)
+  Noise          P=0.915 R=0.852 F1=0.882  (gold 1,604, predicted 1,493)
+  micro P=0.826 R=0.832 F1=0.829 | macro P=0.830 R=0.817 F1=0.814
+
+--- aspect detection: substring (naive) ---
+  Location       P=0.777 R=0.919 F1=0.842  (gold 4,729, predicted 5,591)
+  Cleanliness    P=0.853 R=0.945 F1=0.896  (gold 2,927, predicted 3,244)
+  Service        P=0.915 R=0.881 F1=0.898  (gold 4,342, predicted 4,179)
+  Room           P=0.776 R=0.941 F1=0.850  (gold 8,775, predicted 10,645)
+  Food_Beverage  P=0.584 R=0.970 F1=0.729  (gold 3,026, predicted 5,023)
+  Value          P=0.410 R=0.860 F1=0.555  (gold 892, predicted 1,870)
+  Facilities     P=0.488 R=0.560 F1=0.522  (gold 4,346, predicted 4,988)
+  Noise          P=0.888 R=0.911 F1=0.899  (gold 1,604, predicted 1,647)
+  micro P=0.720 R=0.874 F1=0.790 | macro P=0.711 R=0.873 F1=0.774
+
+--- VADER sentence polarity vs human label (n = 23,113) ---
+  accuracy 0.641, macro-F1 0.518, kappa 0.438; binary (pos/neg sentences, sign of compound) accuracy 0.737
+  confusion (rows = human, cols = VADER; negative/neutral/positive):
+[[4743 4258 1502]
+ [  98  417  276]
+ [ 159 2003 9657]]
+
+--- sign agreement of aspect sentiment with human sentence polarity (aspect detected, pos/neg sentences) ---
+  Location       n= 5,297  agreement 0.867
+  Cleanliness    n= 3,122  agreement 0.804
+  Service        n= 4,075  agreement 0.879
+  Room           n=10,133  agreement 0.674
+  Food_Beverage  n= 3,381  agreement 0.781
+  Value          n= 1,075  agreement 0.607
+  Facilities     n= 2,308  agreement 0.689
+  Noise          n= 1,548  agreement 0.596
+  all            n=20,640  agreement 0.742
+
+v3 Step 12 complete.

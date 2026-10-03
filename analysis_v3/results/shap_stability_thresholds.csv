@@ -1,0 +1,3 @@
+comparison,spearman_rho,spearman_p,kendall_tau,top10_overlap,identical_top3_order
+Primary vs S1 (strict),0.9931623931623932,6.659211129490221e-24,0.9630769230769232,9,True
+Primary vs S2 (wide),0.9897435897435896,8.490862009929897e-22,0.9507692307692308,10,True

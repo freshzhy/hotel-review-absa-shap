@@ -1,0 +1,17 @@
+# v3 pipeline (Python 3.12). Steps 1-8 need only the first block.
+numpy
+pandas
+scipy
+scikit-learn
+xgboost
+lightgbm
+imbalanced-learn
+shap
+vaderSentiment
+matplotlib
+joblib
+# Step 9 (pretrained language model baselines)
+torch
+transformers
+sentence-transformers
+lingua-language-detector

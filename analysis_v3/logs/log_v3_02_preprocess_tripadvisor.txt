@@ -1,0 +1,27 @@
+======================================================================
+v3 Step 2 | TripAdvisor preprocessing
+======================================================================
+Raw rows: 20,491  columns: ['Review', 'Rating']
+After <3-word filter: 20,491
+Segment-level aspect sentiment, overall sentiment and aspect mentions ...
+  20,491 / 20,491 done  (19 worker processes)
+
+Aspect mention rates (word-boundary matching):
+  Room              92.0%
+  Service           82.1%
+  Location          80.5%
+  Food_Beverage     74.6%
+  Value             59.1%
+  Cleanliness       54.9%
+  Facilities        52.1%
+  Noise             33.8%
+
+Class distribution:
+  Low        3,214  15.68%
+  Medium     2,184  10.66%
+  High      15,093  73.66%
+
+Review length (words): mean=105.6, median=78, IQR=[49, 125]
+
+Feature matrix: (20491, 14)
+v3 Step 2 complete.

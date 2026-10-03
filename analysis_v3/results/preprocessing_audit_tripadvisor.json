@@ -1,0 +1,46 @@
+{
+  "raw_rows": 20491,
+  "rating_counts": {
+    "1": 1421,
+    "2": 1793,
+    "3": 2184,
+    "4": 6039,
+    "5": 9054
+  },
+  "dropped_short": 0,
+  "rows_after_filter": 20491,
+  "segments_per_review": {
+    "mean": 13.960031233224342,
+    "median": 10.0
+  },
+  "aspect_mention_rate_pct": {
+    "Location": 80.48899516861061,
+    "Cleanliness": 54.92655312088234,
+    "Service": 82.13849982919331,
+    "Room": 92.01112683617197,
+    "Food_Beverage": 74.61812503050119,
+    "Value": 59.06007515494608,
+    "Facilities": 52.05700063442487,
+    "Noise": 33.80020496803475
+  },
+  "class_distribution": {
+    "Low": {
+      "n": 3214,
+      "pct": 15.684934849446098
+    },
+    "Medium": {
+      "n": 2184,
+      "pct": 10.658337806842027
+    },
+    "High": {
+      "n": 15093,
+      "pct": 73.65672734371186
+    }
+  },
+  "review_word_count": {
+    "mean": 105.55887950807671,
+    "median": 78.0,
+    "q25": 49.0,
+    "q75": 125.0
+  }
+}

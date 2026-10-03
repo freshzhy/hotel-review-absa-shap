@@ -1,0 +1,56 @@
+======================================================================
+v3 Step 1 | Booking.com preprocessing
+======================================================================
+Raw rows: 515,738   hotels: 1,492
+
+--- placeholder audit ---
+  ^no\s+negative$              neg=127,890  pos=      0
+  ^no\s+positive$              neg=      0  pos= 35,946
+  ^nothing$                    neg= 21,185  pos=  1,731
+  ^nothing\s+really$           neg=    656  pos=     41
+  ^nothing\s+at\s+all$         neg=    467  pos=     66
+  ^nothing\s+to\s+report$      neg=     87  pos=      2
+  ^nothing\s+i\s+can\s+think\s+of$ neg=     69  pos=      1
+  ^none$                       neg=  1,501  pos=     40
+  ^n\s*/?\s*a$                 neg=  2,087  pos=     74
+  ^na$                         neg=    272  pos=     19
+  ^nil$                        neg=    332  pos=      7
+  ^$                           neg=    849  pos=    183
+
+Placeholder comments: negative field 155,123 (30.1%), positive field 38,091 (7.4%)
+Additionally removed relative to v1 rule: 4,748 negative / 394 positive
+Placeholder rows whose supplied word count is non-zero: {'negative_nonzero': 27233, 'positive_nonzero': 2145}
+
+Dropped 16,677 reviews with <3 content words; 499,061 remain (96.8% of raw)
+
+Parsing Tags ...
+Segment-level aspect sentiment, overall sentiment and aspect mentions ...
+  50,000 / 499,061
+  100,000 / 499,061
+  150,000 / 499,061
+  200,000 / 499,061
+  250,000 / 499,061
+  300,000 / 499,061
+  350,000 / 499,061
+  400,000 / 499,061
+  450,000 / 499,061
+  499,061 / 499,061 done  (19 worker processes)
+Aspect mention rates (word-boundary matching):
+  Room              68.5%
+  Service           55.2%
+  Location          54.4%
+  Food_Beverage     40.9%
+  Cleanliness       22.5%
+  Facilities        21.7%
+  Value             18.9%
+  Noise             12.7%
+Segments per review: mean 3.76, median 3
+
+Class distribution (primary binning Low=[2.5,4], Medium=(4,7], High=(7,10]):
+  Low        10,318   2.07%
+  Medium     75,065  15.04%
+  High      413,678  82.89%
+
+Feature matrix: (499061, 37)
+Wrote /Users/zhy/Documents/cursor/sci_paper4/analysis_v3/data/booking_X.csv, booking_y.csv, booking_meta.csv
+v3 Step 1 complete.

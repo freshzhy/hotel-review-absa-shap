@@ -1,0 +1,116 @@
+{
+  "language": {
+    "booking_sample": {
+      "n": 50000,
+      "detected_english_pct": 99.444,
+      "flagged_non_english": 77,
+      "flagged_pct": 0.154,
+      "flagged_languages": {
+        "SPANISH": 11,
+        "FRENCH": 9,
+        "DUTCH": 7,
+        "GERMAN": 7,
+        "ITALIAN": 6,
+        "SWEDISH": 6,
+        "ROMANIAN": 4,
+        "LATIN": 4
+      },
+      "examples": [
+        "Uniek hotel op perfecte locatie om London te verkennen",
+        "staff appartamentino pulito e spazioso",
+        "It s ok for 3 star hotel",
+        "No air con",
+        "Oda k k",
+        "It isn t a 4 stars hotel",
+        "Hotel a bit dark",
+        "Repas quelconque Situation literie",
+        "el hotel en general y la habitaci n amplia limpia y confortable",
+        "Miros urat in camera si mucegai in baie"
+      ]
+    },
+    "tripadvisor": {
+      "n": 20491,
+      "detected_english_pct": 99.9755990434825,
+      "flagged_non_english": 2,
+      "flagged_pct": 0.009760382606998195,
+      "flagged_languages": {
+        "FRENCH": 2
+      },
+      "examples": [
+        "une trappe touristes 4* ne pas approcher des boutiques sur la plage vous ne pourrez pas ressortir sans avoir achet\u008f\u0091\u00c4,  ",
+        "hotel unique moment inoubliable lieu hors du temps une vegetation magnifique et des bungalows intimes et ravissants,  "
+      ]
+    }
+  },
+  "rf_english_only": {
+    "n": 49923,
+    "f1_macro": {
+      "mean": 0.5531386991027147,
+      "sd": 0.005553996989754545,
+      "ci_low": 0.5462425009944044,
+      "ci_high": 0.5600348972110251,
+      "n": 5
+    }
+  },
+  "equivalence": {
+    "margin": 0.02,
+    "tests": [
+      {
+        "mean_diff": -0.005342756634939949,
+        "ci90_low": -0.015608239480947576,
+        "ci90_high": 0.004922726211067679,
+        "p_tost": 0.019128124446710644,
+        "equivalent_at_margin": true,
+        "comparison": "26 features + RF vs TF-IDF + LR"
+      },
+      {
+        "mean_diff": -0.007134325115901374,
+        "ci90_low": -0.01998527417741274,
+        "ci90_high": 0.005716623945609992,
+        "p_tost": 0.0498628584614647,
+        "equivalent_at_margin": true,
+        "comparison": "RF vs XGBoost"
+      },
+      {
+        "mean_diff": -0.0034614348312798525,
+        "ci90_low": -0.013731147623285398,
+        "ci90_high": 0.006808277960725694,
+        "p_tost": 0.013229316299740584,
+        "equivalent_at_margin": true,
+        "comparison": "RF vs LightGBM"
+      },
+      {
+        "mean_diff": 0.001800852110950779,
+        "ci90_low": -0.01212770487920835,
+        "ci90_high": 0.01572940910110991,
+        "p_tost": 0.024769971307764118,
+        "equivalent_at_margin": true,
+        "comparison": "RF vs Linear SVM"
+      },
+      {
+        "mean_diff": -0.014809465291946067,
+        "ci90_low": -0.02039771245439121,
+        "ci90_high": -0.009221218129500924,
+        "p_tost": 0.05939234173077701,
+        "equivalent_at_margin": false,
+        "comparison": "Class weighting vs two-stage"
+      },
+      {
+        "mean_diff": 0.0010875951146479767,
+        "ci90_low": -0.01783049485959031,
+        "ci90_high": 0.02000568508888626,
+        "p_tost": 0.05003603460155181,
+        "equivalent_at_margin": false,
+        "comparison": "[grouped CV] 26 features + RF vs TF-IDF + LR"
+      },
+      {
+        "mean_diff": 0.005249109896658166,
+        "ci90_low": -0.013711082693139826,
+        "ci90_high": 0.02420930248645616,
+        "p_tost": 0.08627172182509323,
+        "equivalent_at_margin": false,
+        "comparison": "[grouped CV] RF vs XGBoost"
+      }
+    ]
+  }
+}

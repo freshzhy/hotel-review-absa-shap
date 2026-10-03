@@ -1,0 +1,48 @@
+======================================================================
+v3 Step 6 | SHAP on the evaluated model
+======================================================================
+Explaining: XGBoost
+  params: {'objective': 'multi:softprob', 'base_score': None, 'booster': None, 'callbacks': None, 'colsample_bylevel': None, 'colsample_bynode': None, 'colsample_bytree': 0.8, 'device': None, 'early_stopping_rounds': None, 'enable_categorical': True, 'eval_metric': 'mlogloss', 'feature_types': None, 'feature_weights': None, 'gamma': None, 'grow_policy': None, 'importance_type': None, 'interaction_constraints': None, 'learning_rate': 0.1, 'max_bin': None, 'max_cat_threshold': None, 'max_cat_to_onehot': None, 'max_delta_step': None, 'max_depth': 8, 'max_leaves': None, 'min_child_weight': None, 'missing': nan, 'monotone_constraints': None, 'multi_strategy': None, 'n_estimators': 300, 'n_jobs': -1, 'num_parallel_tree': None, 'random_state': 42, 'reg_alpha': None, 'reg_lambda': None, 'sampling_method': None, 'scale_pos_weight': None, 'subsample': 0.8, 'tree_method': None, 'validate_parameters': None, 'verbosity': 0, 'num_class': 3}
+Held-out pool: 449,061 reviews
+Explanation sample: 1000 held-out reviews  {'High': np.int64(829), 'Low': np.int64(21), 'Medium': np.int64(150)}
+
+Computing TreeSHAP (this is the slow step) ...
+  done in 1s
+  SHAP array shape (1000, 37, 3)
+  aggregated SHAP array shape (1000, 26, 3) (one-hot columns summed per nominal variable)
+
+Top 10 features by mean |SHAP|:
+   1. neg_pos_word_ratio                       0.5944  (16.6%)
+   2. sentiment_gap                            0.4172  (11.7%)
+   3. overall_sentiment                        0.3923  (11.0%)
+   4. sent_Service                             0.2137  (6.0%)
+   5. sent_Room                                0.1739  (4.9%)
+   6. negative_sentiment                       0.1542  (4.3%)
+   7. Review_Total_Positive_Word_Counts        0.1419  (4.0%)
+   8. review_word_count                        0.1404  (3.9%)
+   9. Review_Total_Negative_Word_Counts        0.1396  (3.9%)
+  10. sent_Location                            0.1263  (3.5%)
+
+Aspect sentiment features account for 22.5% of total SHAP mass
+  wrote fig_shap_bar.png
+  wrote fig_shap_beeswarm_Low.png
+  wrote fig_shap_beeswarm_Medium.png
+  wrote fig_shap_beeswarm_High.png
+  wrote fig_shap_by_class.png
+  wrote fig_shap_dependence.png
+
+Top 5 raw-feature Pearson correlations among the top-10 features:
+  review_word_count x Review_Total_Negative_Word_Counts: r = +0.825
+  sentiment_gap x overall_sentiment: r = +0.747
+  Review_Total_Positive_Word_Counts x review_word_count: r = +0.654
+  sentiment_gap x negative_sentiment: r = -0.619
+  neg_pos_word_ratio x Review_Total_Negative_Word_Counts: r = +0.589
+
+Top 5 correlations between per-class SHAP value vectors (High class):
+  neg_pos_word_ratio x Review_Total_Negative_Word_Counts: r = +0.663
+  sentiment_gap x overall_sentiment: r = +0.652
+  review_word_count x Review_Total_Negative_Word_Counts: r = +0.593
+  neg_pos_word_ratio x Review_Total_Positive_Word_Counts: r = +0.578
+  neg_pos_word_ratio x sentiment_gap: r = +0.481
+
+v3 Step 6 complete.
