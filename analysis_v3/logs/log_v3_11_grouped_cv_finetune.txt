@@ -1,0 +1,162 @@
+======================================================================
+v3 Step 11 | Hotel-grouped cross-validation
+======================================================================
+  fold 1: 40,001 train / 9,999 test reviews, 298 test hotels, Low share 2.07%
+  fold 2: 40,001 train / 9,999 test reviews, 295 test hotels, Low share 2.06%
+  fold 3: 40,001 train / 9,999 test reviews, 295 test hotels, Low share 2.07%
+  fold 4: 39,998 train / 10,002 test reviews, 298 test hotels, Low share 2.07%
+  fold 5: 39,999 train / 10,001 test reviews, 294 test hotels, Low share 2.07%
+1,480 hotels in the sample; no hotel appears in both training and test folds
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 11880.53it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_transform.weight  | UNEXPECTED | 
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+vocab_projector.bias    | UNEXPECTED | 
+classifier.bias         | MISSING    | 
+pre_classifier.weight   | MISSING    | 
+pre_classifier.bias     | MISSING    | 
+classifier.weight       | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+    fold 1 epoch 1 step 200/1251 loss 0.7802 (55s)
+    fold 1 epoch 1 step 400/1251 loss 2.0671 (110s)
+    fold 1 epoch 1 step 600/1251 loss 0.3902 (164s)
+    fold 1 epoch 1 step 800/1251 loss 0.8357 (218s)
+    fold 1 epoch 1 step 1000/1251 loss 0.6275 (272s)
+    fold 1 epoch 1 step 1200/1251 loss 1.5590 (327s)
+    fold 1 epoch 2 step 200/1251 loss 0.1944 (398s)
+    fold 1 epoch 2 step 400/1251 loss 1.7829 (452s)
+    fold 1 epoch 2 step 600/1251 loss 0.6446 (507s)
+    fold 1 epoch 2 step 800/1251 loss 0.3999 (561s)
+    fold 1 epoch 2 step 1000/1251 loss 0.4939 (616s)
+    fold 1 epoch 2 step 1200/1251 loss 0.6569 (670s)
+  DistilBERT fold 1: F1m=0.6287
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 9984.06it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_transform.weight  | UNEXPECTED | 
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+vocab_projector.bias    | UNEXPECTED | 
+classifier.bias         | MISSING    | 
+pre_classifier.weight   | MISSING    | 
+pre_classifier.bias     | MISSING    | 
+classifier.weight       | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+    fold 2 epoch 1 step 200/1251 loss 0.6546 (54s)
+    fold 2 epoch 1 step 400/1251 loss 0.5268 (109s)
+    fold 2 epoch 1 step 600/1251 loss 0.6662 (163s)
+    fold 2 epoch 1 step 800/1251 loss 0.5202 (217s)
+    fold 2 epoch 1 step 1000/1251 loss 0.4864 (271s)
+    fold 2 epoch 1 step 1200/1251 loss 0.4616 (325s)
+    fold 2 epoch 2 step 200/1251 loss 1.1231 (394s)
+    fold 2 epoch 2 step 400/1251 loss 0.8307 (448s)
+    fold 2 epoch 2 step 600/1251 loss 1.3734 (502s)
+    fold 2 epoch 2 step 800/1251 loss 0.3349 (556s)
+    fold 2 epoch 2 step 1000/1251 loss 0.6676 (611s)
+    fold 2 epoch 2 step 1200/1251 loss 0.2910 (665s)
+  DistilBERT fold 2: F1m=0.6189
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 11277.74it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_transform.weight  | UNEXPECTED | 
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+vocab_projector.bias    | UNEXPECTED | 
+classifier.bias         | MISSING    | 
+pre_classifier.weight   | MISSING    | 
+pre_classifier.bias     | MISSING    | 
+classifier.weight       | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+    fold 3 epoch 1 step 200/1251 loss 0.7096 (54s)
+    fold 3 epoch 1 step 400/1251 loss 0.5639 (108s)
+    fold 3 epoch 1 step 600/1251 loss 1.6857 (162s)
+    fold 3 epoch 1 step 800/1251 loss 0.8686 (216s)
+    fold 3 epoch 1 step 1000/1251 loss 0.5711 (270s)
+    fold 3 epoch 1 step 1200/1251 loss 0.3860 (324s)
+    fold 3 epoch 2 step 200/1251 loss 0.2196 (393s)
+    fold 3 epoch 2 step 400/1251 loss 2.1104 (447s)
+    fold 3 epoch 2 step 600/1251 loss 1.1373 (501s)
+    fold 3 epoch 2 step 800/1251 loss 0.2839 (556s)
+    fold 3 epoch 2 step 1000/1251 loss 0.7268 (610s)
+    fold 3 epoch 2 step 1200/1251 loss 0.3718 (664s)
+  DistilBERT fold 3: F1m=0.6250
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 11946.18it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_transform.weight  | UNEXPECTED | 
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+vocab_projector.bias    | UNEXPECTED | 
+classifier.bias         | MISSING    | 
+pre_classifier.weight   | MISSING    | 
+pre_classifier.bias     | MISSING    | 
+classifier.weight       | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+    fold 4 epoch 1 step 200/1250 loss 0.9070 (54s)
+    fold 4 epoch 1 step 400/1250 loss 0.3953 (108s)
+    fold 4 epoch 1 step 600/1250 loss 0.4160 (162s)
+    fold 4 epoch 1 step 800/1250 loss 0.4653 (217s)
+    fold 4 epoch 1 step 1000/1250 loss 0.8229 (271s)
+    fold 4 epoch 1 step 1200/1250 loss 0.8161 (325s)
+    fold 4 epoch 2 step 200/1250 loss 0.5384 (393s)
+    fold 4 epoch 2 step 400/1250 loss 2.2385 (448s)
+    fold 4 epoch 2 step 600/1250 loss 0.7537 (502s)
+    fold 4 epoch 2 step 800/1250 loss 1.5231 (556s)
+    fold 4 epoch 2 step 1000/1250 loss 0.6450 (611s)
+    fold 4 epoch 2 step 1200/1250 loss 0.4921 (665s)
+  DistilBERT fold 4: F1m=0.6295
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 8835.51it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_transform.weight  | UNEXPECTED | 
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+vocab_projector.bias    | UNEXPECTED | 
+classifier.bias         | MISSING    | 
+pre_classifier.weight   | MISSING    | 
+pre_classifier.bias     | MISSING    | 
+classifier.weight       | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+    fold 5 epoch 1 step 200/1250 loss 0.7128 (54s)
+    fold 5 epoch 1 step 400/1250 loss 0.2946 (108s)
+    fold 5 epoch 1 step 600/1250 loss 0.8489 (162s)
+    fold 5 epoch 1 step 800/1250 loss 0.3055 (217s)
+    fold 5 epoch 1 step 1000/1250 loss 1.0802 (271s)
+    fold 5 epoch 1 step 1200/1250 loss 0.4584 (325s)
+    fold 5 epoch 2 step 200/1250 loss 0.3175 (393s)
+    fold 5 epoch 2 step 400/1250 loss 0.9033 (447s)
+    fold 5 epoch 2 step 600/1250 loss 0.6210 (501s)
+    fold 5 epoch 2 step 800/1250 loss 0.2425 (556s)
+    fold 5 epoch 2 step 1000/1250 loss 0.8191 (610s)
+    fold 5 epoch 2 step 1200/1250 loss 0.7085 (664s)
+  DistilBERT fold 5: F1m=0.6292
+
+DistilBERT grouped-CV checkpoints written; now run without --ft-only.

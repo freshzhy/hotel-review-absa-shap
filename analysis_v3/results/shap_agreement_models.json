@@ -1,0 +1,49 @@
+{
+  "explained_model": "XGBoost",
+  "n_reviews": 1000,
+  "spearman_rho": 0.9295726495726495,
+  "spearman_p": 6.837019677124316e-12,
+  "kendall_tau": 0.7600000000000001,
+  "kendall_p": 6.685265991909273e-10,
+  "top10_overlap": 9,
+  "group_share_pct_rf": {
+    "A": 13.847720766735328,
+    "B": 42.25565942405589,
+    "C": 35.904786479545784,
+    "D": 7.991833329662996
+  },
+  "group_share_pct_explained": {
+    "A": 22.514254929051496,
+    "B": 30.358371713427896,
+    "C": 31.123187194461533,
+    "D": 16.004186163059078
+  },
+  "rf_importance": {
+    "neg_pos_word_ratio": 0.0730665383266231,
+    "sentiment_gap": 0.058989926745058235,
+    "overall_sentiment": 0.045101687353092314,
+    "positive_sentiment": 0.04095366890792738,
+    "Review_Total_Negative_Word_Counts": 0.02845484928157726,
+    "Review_Total_Positive_Word_Counts": 0.0251102280762003,
+    "negative_sentiment": 0.022189235492289433,
+    "sent_Service": 0.016037266469144128,
+    "sent_Room": 0.011563708313260958,
+    "sent_Location": 0.009329048132281189,
+    "sent_Cleanliness": 0.0084563126101583,
+    "review_word_count": 0.008234201740780234,
+    "num_aspects_mentioned": 0.0072339571502264615,
+    "Total_Number_of_Reviews_Reviewer_Has_Given": 0.005266906965079931,
+    "Trip_Type": 0.005025160097893109,
+    "Traveler_Type": 0.004420719511686302,
+    "review_month": 0.0044049963892834835,
+    "Hotel_Country": 0.0038209968020581713,
+    "sent_Value": 0.0036382752719930915,
+    "sent_Food_Beverage": 0.003478979001774888,
+    "Nights": 0.003161859577672199,
+    "Is_Mobile": 0.002140289330870655,
+    "is_experienced_reviewer": 0.0018854245203174492,
+    "is_peak_season": 0.0015027922739827557,
+    "sent_Facilities": 0.0013213720607693057,
+    "sent_Noise": 0.0009799316457575814
+  }
+}

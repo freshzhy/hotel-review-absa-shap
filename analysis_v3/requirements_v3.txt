@@ -1,0 +1,18 @@
+# Python 3.12. Versions of the reported run are pinned where recorded.
+numpy==2.5.3
+pandas==3.0.6
+scipy==1.18.1
+scikit-learn==1.9.1
+imbalanced-learn==0.14.2
+xgboost==3.4.1
+lightgbm==4.7.0
+shap==0.52.0
+vaderSentiment
+lingua-language-detector
+matplotlib
+joblib
+Pillow
+# Steps 9 and 11 (transformer baselines)
+torch
+transformers
+sentence-transformers

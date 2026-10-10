@@ -1,0 +1,120 @@
+======================================================================
+v3 Step 3 | Model comparison with naive baselines and significance tests
+======================================================================
+Sample: (50000, 37)   class order ['High', 'Low', 'Medium']
+  High      41,446  82.89%
+  Low        1,034   2.07%
+  Medium     7,520  15.04%
+
+5-fold CV: 40,000 train / 10,000 validation per fold
+
+------------------------------------------------------------
+Majority-class baseline
+  fold 1: acc=0.8290 F1m=0.3022
+  fold 2: acc=0.8289 F1m=0.3021
+  fold 3: acc=0.8289 F1m=0.3021
+  fold 4: acc=0.8289 F1m=0.3021
+  fold 5: acc=0.8289 F1m=0.3021
+  => F1_macro 0.3022 [0.3021, 0.3022]   acc 0.8289 [0.8289, 0.8290]   (0.1s)
+
+------------------------------------------------------------
+Stratified-random baseline
+  fold 1: acc=0.7118 F1m=0.3328
+  fold 2: acc=0.7162 F1m=0.3362
+  fold 3: acc=0.7175 F1m=0.3394
+  fold 4: acc=0.7115 F1m=0.3278
+  fold 5: acc=0.7106 F1m=0.3243
+  => F1_macro 0.3321 [0.3245, 0.3397]   acc 0.7135 [0.7097, 0.7174]   (0.1s)
+
+------------------------------------------------------------
+Logistic Regression
+  fold 1: acc=0.7325 F1m=0.4938
+  fold 2: acc=0.7478 F1m=0.5071
+  fold 3: acc=0.7439 F1m=0.5061
+  fold 4: acc=0.7429 F1m=0.5039
+  fold 5: acc=0.7406 F1m=0.5010
+  => F1_macro 0.5024 [0.4957, 0.5090]   acc 0.7415 [0.7345, 0.7486]   (1.6s)
+
+------------------------------------------------------------
+Linear SVM
+  fold 1: acc=0.8273 F1m=0.5464
+  fold 2: acc=0.8312 F1m=0.5452
+  fold 3: acc=0.8354 F1m=0.5627
+  fold 4: acc=0.8318 F1m=0.5551
+  fold 5: acc=0.8270 F1m=0.5282
+  => F1_macro 0.5475 [0.5315, 0.5636]   acc 0.8305 [0.8262, 0.8349]   (2.6s)
+
+------------------------------------------------------------
+Random Forest
+  fold 1: acc=0.7738 F1m=0.5491
+  fold 2: acc=0.7756 F1m=0.5471
+  fold 3: acc=0.7769 F1m=0.5492
+  fold 4: acc=0.7711 F1m=0.5595
+  fold 5: acc=0.7753 F1m=0.5417
+  => F1_macro 0.5493 [0.5413, 0.5574]   acc 0.7745 [0.7718, 0.7773]   (4.7s)
+
+------------------------------------------------------------
+XGBoost
+  fold 1: acc=0.8141 F1m=0.5503
+  fold 2: acc=0.8202 F1m=0.5690
+  fold 3: acc=0.8188 F1m=0.5485
+  fold 4: acc=0.8142 F1m=0.5683
+  fold 5: acc=0.8145 F1m=0.5463
+  => F1_macro 0.5565 [0.5425, 0.5704]   acc 0.8164 [0.8127, 0.8200]   (29.8s)
+
+------------------------------------------------------------
+LightGBM
+  fold 1: acc=0.7893 F1m=0.5553
+  fold 2: acc=0.7891 F1m=0.5562
+  fold 3: acc=0.7844 F1m=0.5401
+  fold 4: acc=0.7857 F1m=0.5647
+  fold 5: acc=0.7841 F1m=0.5477
+  => F1_macro 0.5528 [0.5413, 0.5643]   acc 0.7865 [0.7834, 0.7896]   (64.7s)
+
+======================================================================
+Significance testing (macro-F1)
+
+Corrected resampled paired t-tests (Holm-adjusted):
+  * Majority-class baseline      vs Random Forest                d=-0.2472  p=<0.001
+  * Majority-class baseline      vs Logistic Regression          d=-0.2002  p=<0.001
+  * Majority-class baseline      vs LightGBM                     d=-0.2506  p=<0.001
+  * Stratified-random baseline   vs Logistic Regression          d=-0.1702  p=<0.001
+  * Stratified-random baseline   vs Random Forest                d=-0.2172  p=<0.001
+  * Majority-class baseline      vs XGBoost                      d=-0.2543  p=<0.001
+  * Stratified-random baseline   vs Linear SVM                   d=-0.2154  p=<0.001
+  * Majority-class baseline      vs Linear SVM                   d=-0.2454  p=<0.001
+  * Stratified-random baseline   vs XGBoost                      d=-0.2243  p=<0.001
+  * Stratified-random baseline   vs LightGBM                     d=-0.2207  p=<0.001
+  * Logistic Regression          vs Random Forest                d=-0.0470  p=0.010
+  * Logistic Regression          vs XGBoost                      d=-0.0541  p=0.012
+  * Majority-class baseline      vs Stratified-random baseline   d=-0.0300  p=0.017
+  * Logistic Regression          vs LightGBM                     d=-0.0504  p=0.021
+  * Logistic Regression          vs Linear SVM                   d=-0.0452  p=0.037
+    Linear SVM                   vs Random Forest                d=-0.0018  p=1.000
+    Linear SVM                   vs XGBoost                      d=-0.0089  p=1.000
+    Linear SVM                   vs LightGBM                     d=-0.0053  p=1.000
+    Random Forest                vs XGBoost                      d=-0.0071  p=1.000
+    Random Forest                vs LightGBM                     d=-0.0035  p=1.000
+    XGBoost                      vs LightGBM                     d=+0.0037  p=1.000
+
+Friedman across the 5 learners: chi2=13.280, p=0.010
+Nemenyi critical difference (alpha=0.05): 2.728
+  mean rank 1.80  XGBoost
+  mean rank 2.00  LightGBM
+  mean rank 2.80  Random Forest
+  mean rank 3.40  Linear SVM
+  mean rank 5.00  Logistic Regression
+
+                     Model        Accuracy Precision_macro    Recall_macro        F1_macro    F1_macro_95CI     F1_weighted           Kappa F1_Low F1_Medium F1_High  Seconds
+   Majority-class baseline 0.8289 ± 0.0000 0.2763 ± 0.0000 0.3333 ± 0.0000 0.3022 ± 0.0000 [0.3021, 0.3022] 0.7514 ± 0.0001 0.0000 ± 0.0000 0.0000    0.0000  0.9065      0.1
+Stratified-random baseline 0.7135 ± 0.0031 0.3321 ± 0.0062 0.3322 ± 0.0061 0.3321 ± 0.0061 [0.3245, 0.3397] 0.7119 ± 0.0031 0.0002 ± 0.0108 0.0167    0.1482  0.8315      0.1
+       Logistic Regression 0.7415 ± 0.0057 0.4798 ± 0.0040 0.6504 ± 0.0087 0.5024 ± 0.0053 [0.4957, 0.5090] 0.7802 ± 0.0040 0.3478 ± 0.0078 0.2389    0.4067  0.8614      1.6
+                Linear SVM 0.8305 ± 0.0035 0.5376 ± 0.0115 0.5681 ± 0.0156 0.5475 ± 0.0129 [0.5315, 0.5636] 0.8320 ± 0.0032 0.4197 ± 0.0112 0.2649    0.4650  0.9127      2.6
+             Random Forest 0.7745 ± 0.0022 0.5275 ± 0.0043 0.6135 ± 0.0097 0.5493 ± 0.0065 [0.5413, 0.5574] 0.8006 ± 0.0019 0.4126 ± 0.0056 0.2809    0.4987  0.8684      4.7
+                   XGBoost 0.8164 ± 0.0029 0.5609 ± 0.0106 0.5723 ± 0.0098 0.5565 ± 0.0112 [0.5425, 0.5704] 0.8274 ± 0.0025 0.4471 ± 0.0077 0.2506    0.5215  0.8973     29.8
+                  LightGBM 0.7865 ± 0.0025 0.5305 ± 0.0071 0.6088 ± 0.0126 0.5528 ± 0.0093 [0.5413, 0.5643] 0.8091 ± 0.0022 0.4245 ± 0.0064 0.2738    0.5073  0.8772     64.7
+
+Best learner by macro-F1: XGBoost
+Saved models/final_model.joblib (XGBoost)
+
+v3 Step 3 complete.

@@ -1,0 +1,22 @@
+======================================================================
+v3 Step 13 | Language check and equivalence tests
+======================================================================
+  booking_sample: 50,000 texts, detected English 99.44%, flagged non-English 77 (0.15%) {'SPANISH': 11, 'FRENCH': 9, 'DUTCH': 7, 'GERMAN': 7, 'ITALIAN': 6, 'SWEDISH': 6, 'ROMANIAN': 4, 'LATIN': 4}  (20s)
+      e.g. Uniek hotel op perfecte locatie om London te verkennen
+      e.g. staff appartamentino pulito e spazioso
+      e.g. It s ok for 3 star hotel
+      e.g. No air con
+      e.g. Oda k k
+  tripadvisor: 20,491 texts, detected English 99.98%, flagged non-English 2 (0.01%) {'FRENCH': 2}  (15s)
+      e.g. une trappe touristes 4* ne pas approcher des boutiques sur la plage vous ne pourrez pas ressortir sans avoir achetÄ,  
+      e.g. hotel unique moment inoubliable lieu hors du temps une vegetation magnifique et des bungalows intimes et ravissants,  
+  RF on English-only sample (n = 49,923): F1m 0.5531 [0.5462, 0.5600]
+  26 features + RF vs TF-IDF + LR                  diff -0.0053, 90% CI [-0.0156, +0.0049], TOST p = 0.019 -> equivalent at ±0.02
+  RF vs XGBoost                                    diff -0.0071, 90% CI [-0.0200, +0.0057], TOST p = 0.050 -> equivalent at ±0.02
+  RF vs LightGBM                                   diff -0.0035, 90% CI [-0.0137, +0.0068], TOST p = 0.013 -> equivalent at ±0.02
+  RF vs Linear SVM                                 diff +0.0018, 90% CI [-0.0121, +0.0157], TOST p = 0.025 -> equivalent at ±0.02
+  Class weighting vs two-stage                     diff -0.0148, 90% CI [-0.0204, -0.0092], TOST p = 0.059 -> not shown equivalent at ±0.02
+  [grouped CV] 26 features + RF vs TF-IDF + LR     diff +0.0011, 90% CI [-0.0178, +0.0200], TOST p = 0.050 -> not shown equivalent at ±0.02
+  [grouped CV] RF vs XGBoost                       diff +0.0052, 90% CI [-0.0137, +0.0242], TOST p = 0.086 -> not shown equivalent at ±0.02
+
+v3 Step 13 complete.

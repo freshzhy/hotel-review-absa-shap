@@ -1,0 +1,319 @@
+{
+  "n_sentences": 23113,
+  "mapping": {
+    "Location": [
+      "Location"
+    ],
+    "Cleanliness": [
+      "Clean"
+    ],
+    "Service": [
+      "Staff",
+      "Reception-checkin"
+    ],
+    "Room": [
+      "Room",
+      "Bed",
+      "Bathroom/Shower (toilet)",
+      "View (Balcony)",
+      "Comfort"
+    ],
+    "Food_Beverage": [
+      "Breakfast",
+      "Restaurant (dinner)",
+      "Bar"
+    ],
+    "Value": [
+      "Value for money"
+    ],
+    "Facilities": [
+      "Facilities/Amenities",
+      "Pool",
+      "Parking",
+      "Lift",
+      "Wi-Fi"
+    ],
+    "Noise": [
+      "Noise"
+    ]
+  },
+  "detection": {
+    "word-boundary + inflections (study)": {
+      "per_aspect": {
+        "Location": {
+          "precision": 0.7967255334805003,
+          "recall": 0.9158384436455911,
+          "f1": 0.8521396950319724,
+          "support": 4729,
+          "predicted": 5436
+        },
+        "Cleanliness": {
+          "precision": 0.8639240506329114,
+          "recall": 0.9326955927570891,
+          "f1": 0.8969935929029078,
+          "support": 2927,
+          "predicted": 3160
+        },
+        "Service": {
+          "precision": 0.9171084337349398,
+          "recall": 0.8765545831414094,
+          "f1": 0.8963730569948186,
+          "support": 4342,
+          "predicted": 4150
+        },
+        "Room": {
+          "precision": 0.7807879423829056,
+          "recall": 0.9327635327635327,
+          "f1": 0.8500363485304808,
+          "support": 8775,
+          "predicted": 10483
+        },
+        "Food_Beverage": {
+          "precision": 0.8300597779675492,
+          "recall": 0.9636483807005949,
+          "f1": 0.8918794922771066,
+          "support": 3026,
+          "predicted": 3513
+        },
+        "Value": {
+          "precision": 0.6522506619593998,
+          "recall": 0.82847533632287,
+          "f1": 0.7298765432098765,
+          "support": 892,
+          "predicted": 1133
+        },
+        "Facilities": {
+          "precision": 0.8557772236076475,
+          "recall": 0.4737689829728486,
+          "f1": 0.60989336492891,
+          "support": 4346,
+          "predicted": 2406
+        },
+        "Noise": {
+          "precision": 0.9152542372881356,
+          "recall": 0.9089775561097256,
+          "f1": 0.9121050985298718,
+          "support": 1604,
+          "predicted": 1593
+        }
+      },
+      "micro": {
+        "precision": 0.8227395369266487,
+        "recall": 0.8558467412943441,
+        "f1": 0.838966648004479
+      },
+      "macro": {
+        "precision": 0.8264859826317487,
+        "recall": 0.8540903010517077,
+        "f1": 0.8299121490507431
+      }
+    },
+    "word-boundary, plural only": {
+      "per_aspect": {
+        "Location": {
+          "precision": 0.8171147292692162,
+          "recall": 0.9126665256925354,
+          "f1": 0.8622515233243432,
+          "support": 4729,
+          "predicted": 5282
+        },
+        "Cleanliness": {
+          "precision": 0.857429718875502,
+          "recall": 0.729415784079262,
+          "f1": 0.7882591840502123,
+          "support": 2927,
+          "predicted": 2490
+        },
+        "Service": {
+          "precision": 0.9196709412049359,
+          "recall": 0.8754030400736987,
+          "f1": 0.8969911504424779,
+          "support": 4342,
+          "predicted": 4133
+        },
+        "Room": {
+          "precision": 0.7815366972477065,
+          "recall": 0.931965811965812,
+          "f1": 0.8501481365975363,
+          "support": 8775,
+          "predicted": 10464
+        },
+        "Food_Beverage": {
+          "precision": 0.8322377822234924,
+          "recall": 0.9623265036351619,
+          "f1": 0.8925670498084292,
+          "support": 3026,
+          "predicted": 3499
+        },
+        "Value": {
+          "precision": 0.6623496762257169,
+          "recall": 0.8026905829596412,
+          "f1": 0.7257982767359351,
+          "support": 892,
+          "predicted": 1081
+        },
+        "Facilities": {
+          "precision": 0.8557772236076475,
+          "recall": 0.4737689829728486,
+          "f1": 0.60989336492891,
+          "support": 4346,
+          "predicted": 2406
+        },
+        "Noise": {
+          "precision": 0.9149363697253852,
+          "recall": 0.8516209476309227,
+          "f1": 0.8821440103325799,
+          "support": 1604,
+          "predicted": 1493
+        }
+      },
+      "micro": {
+        "precision": 0.8260827282157677,
+        "recall": 0.8316634574589602,
+        "f1": 0.8288636991982306
+      },
+      "macro": {
+        "precision": 0.8301316422974503,
+        "recall": 0.8174822723762354,
+        "f1": 0.813506587027553
+      }
+    },
+    "substring (naive)": {
+      "per_aspect": {
+        "Location": {
+          "precision": 0.7771418350921123,
+          "recall": 0.9187989004017763,
+          "f1": 0.8420542635658915,
+          "support": 4729,
+          "predicted": 5591
+        },
+        "Cleanliness": {
+          "precision": 0.8526510480887793,
+          "recall": 0.9449948752989409,
+          "f1": 0.8964511424404472,
+          "support": 2927,
+          "predicted": 3244
+        },
+        "Service": {
+          "precision": 0.9152907394113424,
+          "recall": 0.8809304467987102,
+          "f1": 0.8977819504752963,
+          "support": 4342,
+          "predicted": 4179
+        },
+        "Room": {
+          "precision": 0.7756693283231564,
+          "recall": 0.9409686609686609,
+          "f1": 0.8503604531410917,
+          "support": 8775,
+          "predicted": 10645
+        },
+        "Food_Beverage": {
+          "precision": 0.5843121640453912,
+          "recall": 0.9699272967614012,
+          "f1": 0.7292831407628276,
+          "support": 3026,
+          "predicted": 5023
+        },
+        "Value": {
+          "precision": 0.4101604278074866,
+          "recall": 0.8598654708520179,
+          "f1": 0.555394641564084,
+          "support": 892,
+          "predicted": 1870
+        },
+        "Facilities": {
+          "precision": 0.48817161186848435,
+          "recall": 0.5602853198343304,
+          "f1": 0.5217484465395329,
+          "support": 4346,
+          "predicted": 4988
+        },
+        "Noise": {
+          "precision": 0.8876745598057073,
+          "recall": 0.9114713216957606,
+          "f1": 0.8994155644417102,
+          "support": 1604,
+          "predicted": 1647
+        }
+      },
+      "micro": {
+        "precision": 0.7204668298061151,
+        "recall": 0.8743839953004144,
+        "f1": 0.7899982308191308
+      },
+      "macro": {
+        "precision": 0.7113839643053075,
+        "recall": 0.8734052865764498,
+        "f1": 0.7740612003663602
+      }
+    }
+  },
+  "sentence_polarity": {
+    "n": 23113,
+    "accuracy": 0.6410677973434864,
+    "macro_f1": 0.518036629953298,
+    "kappa": 0.43813032102851435,
+    "binary_accuracy_pos_neg": 0.7370307320132604,
+    "confusion_labels": [
+      "negative",
+      "neutral",
+      "positive"
+    ],
+    "confusion": [
+      [
+        4743,
+        4258,
+        1502
+      ],
+      [
+        98,
+        417,
+        276
+      ],
+      [
+        159,
+        2003,
+        9657
+      ]
+    ]
+  },
+  "aspect_sign_agreement": {
+    "Location": {
+      "n": 5297,
+      "agreement": 0.8670945818387766
+    },
+    "Cleanliness": {
+      "n": 3122,
+      "agreement": 0.8039718129404229
+    },
+    "Service": {
+      "n": 4075,
+      "agreement": 0.8785276073619632
+    },
+    "Room": {
+      "n": 10133,
+      "agreement": 0.6742327050231915
+    },
+    "Food_Beverage": {
+      "n": 3381,
+      "agreement": 0.7808340727595386
+    },
+    "Value": {
+      "n": 1075,
+      "agreement": 0.6065116279069768
+    },
+    "Facilities": {
+      "n": 2308,
+      "agreement": 0.6893414211438474
+    },
+    "Noise": {
+      "n": 1548,
+      "agreement": 0.5962532299741602
+    },
+    "all": {
+      "n": 20640,
+      "agreement": 0.7416666666666667
+    }
+  }
+}

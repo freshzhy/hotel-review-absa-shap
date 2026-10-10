@@ -1,0 +1,3 @@
+platform,n_reviews,words_mean,words_median,words_q25,words_q75,pct_Low,pct_Medium,pct_High,rating_scale,review_format,year_range,geography,n_countries,n_reviewer_nationalities
+Booking.com,499061,34.370824408238676,23.0,11.0,43.0,2.06748273257177,15.041247462735017,82.89126980469321,2.5-10 (0.5 steps),"two fields (positive, negative)",2015-2017,six European countries,6.0,226.0
+TripAdvisor,20491,105.55887950807671,78.0,49.0,125.0,15.684934849446098,10.658337806842027,73.65672734371186,1-5 stars,single free-text field,not supplied with the dataset,not supplied with the dataset,,

@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+title: "Code for: How much accuracy does interpretability cost? Aspect-based features versus transformer models for classifying hotel guest satisfaction across two review platforms"
+authors:
+  - family-names: Zhang
+    given-names: Haoyu
+    affiliation: "Library, Sichuan Tourism University"
+  - family-names: Wang
+    given-names: Mei
+    affiliation: "School of Artificial Intelligence, Sichuan Tourism University"
+  - family-names: Li
+    given-names: Ling
+    affiliation: "School of Artificial Intelligence, Sichuan Tourism University"
+version: "3.2"
+license: MIT
+doi: 10.5281/zenodo.23114483

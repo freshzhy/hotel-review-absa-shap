@@ -1,0 +1,10 @@
+======================================================================
+v3 Step 10 | SHAP ranking agreement across model families
+======================================================================
+RF TreeSHAP on 1000 held-out reviews in 184s
+RF vs XGBoost: Spearman rho = 0.930 (p = 6.84e-12), Kendall tau = 0.760, top-10 overlap = 9/10
+Group shares RF: A 13.8%, B 42.3%, C 35.9%, D 8.0%
+Group shares XGBoost: A 22.5%, B 30.4%, C 31.1%, D 16.0%
+RF top 10: neg_pos_word_ratio (18.5%), sentiment_gap (14.9%), overall_sentiment (11.4%), positive_sentiment (10.3%), Review_Total_Negative_Word_Counts (7.2%), Review_Total_Positive_Word_Counts (6.3%), negative_sentiment (5.6%), sent_Service (4.1%), sent_Room (2.9%), sent_Location (2.4%)
+
+v3 Step 10 complete.
