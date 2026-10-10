@@ -149,7 +149,7 @@ If you use this code, please cite the article (citation details will be added on
 
 > Zhang H, Wang M, Li L. 2026. Code for "How much accuracy does interpretability cost? Aspect-based features versus
 > transformer models for classifying hotel guest satisfaction across two review platforms". Zenodo.
-> https://doi.org/10.5281/zenodo.23114483
+> https://doi.org/10.5281/zenodo.23277150
 
 Please also cite the datasets:
 
